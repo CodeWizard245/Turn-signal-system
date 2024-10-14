@@ -1,4 +1,4 @@
-RegisterServerEvent('syncTurnSignal')
-AddEventHandler('syncTurnSignal', function(status, side, vehNet)
-    TriggerClientEvent('syncTurnSignalClient', -1, status, side, vehNet)
+RegisterNetEvent('syncTurnSignal')
+AddEventHandler('syncTurnSignal', function(state, signalType, vehicleNetId)
+    TriggerClientEvent('updateTurnSignal', -1, state, signalType, vehicleNetId)
 end)
